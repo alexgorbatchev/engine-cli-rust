@@ -1,0 +1,28 @@
+[package]
+name = "engine-cli"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+description = "Inspect, repair and back up Engine DJ collections"
+
+[dependencies]
+audio-metadata = { path = "../fetch-track-cli/crates/audio-metadata" }
+cli-command-kit = { path = "../cli-command-kit" }
+clap_complete = "4.6.11"
+engine-library = { path = "crates/engine-library" }
+dirs = "6"
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "signal"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+
+[dev-dependencies]
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+tempfile = "3"
+
+
+[workspace]
+members = [".","crates/engine-library"]
+default-members = [".","crates/engine-library"]
+resolver = "3"

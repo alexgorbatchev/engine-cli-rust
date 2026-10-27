@@ -1,0 +1,26 @@
+default:
+    @just --list
+
+build:
+    cargo build --package engine-library --all-targets
+
+test:
+    cargo test --package engine-library --all-targets
+
+fmt:
+    cargo fmt --package engine-library
+
+fmt-check:
+    cargo fmt --package engine-library -- --check
+
+lint:
+    cargo clippy --package engine-library --all-targets -- -D warnings
+
+coverage:
+    mkdir -p .tmp
+    cargo llvm-cov --package engine-library --exclude-from-report engine-cli --all-targets --fail-under-lines 90 --json --output-path .tmp/coverage-final.json
+
+doc:
+    RUSTDOCFLAGS="-D warnings" cargo doc --package engine-library --no-deps
+
+check: fmt-check lint test coverage doc

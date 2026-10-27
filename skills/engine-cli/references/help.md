@@ -1,0 +1,81 @@
+---
+created_on: 2026-10-14 16:53
+last_modified: 2026-10-14 17:01
+status: current
+---
+
+## Generated help queries
+
+Each query below prints the selected command's help without accessing the collection. These paths are help requests, including the generated help command's own help; their trailing command names select a help target rather than positional domain inputs. Agent help starts with the skill-reading alert. An unknown target is an argument error.
+
+- `engine-cli help`
+- `engine-cli help help`
+- `engine-cli help library`
+- `engine-cli help library verify`
+- `engine-cli help library sync`
+- `engine-cli help library backup`
+- `engine-cli help library restore`
+- `engine-cli help library prune`
+- `engine-cli help playlist`
+- `engine-cli help playlist list`
+- `engine-cli help playlist inspect`
+- `engine-cli help playlist create`
+- `engine-cli help playlist rm`
+- `engine-cli help playlist move`
+- `engine-cli help playlist track`
+- `engine-cli help playlist track add`
+- `engine-cli help playlist track rm`
+- `engine-cli help playlist track move`
+- `engine-cli help track`
+- `engine-cli help track add`
+- `engine-cli help track rm`
+- `engine-cli help track move`
+- `engine-cli help track relocate`
+- `engine-cli help track artwork`
+- `engine-cli help track artwork normalize`
+- `engine-cli help skill`
+- `engine-cli library help`
+- `engine-cli library help help`
+- `engine-cli library help verify`
+- `engine-cli library help sync`
+- `engine-cli library help backup`
+- `engine-cli library help restore`
+- `engine-cli library help prune`
+- `engine-cli playlist help`
+- `engine-cli playlist help help`
+- `engine-cli playlist help list`
+- `engine-cli playlist help inspect`
+- `engine-cli playlist help create`
+- `engine-cli playlist help rm`
+- `engine-cli playlist help move`
+- `engine-cli playlist help track`
+- `engine-cli playlist help track add`
+- `engine-cli playlist help track rm`
+- `engine-cli playlist help track move`
+- `engine-cli playlist track help`
+- `engine-cli playlist track help help`
+- `engine-cli playlist track help add`
+- `engine-cli playlist track help rm`
+- `engine-cli playlist track help move`
+- `engine-cli track help`
+- `engine-cli track help help`
+- `engine-cli track help add`
+- `engine-cli track help rm`
+- `engine-cli track help move`
+- `engine-cli track help relocate`
+- `engine-cli track help artwork`
+- `engine-cli track help artwork normalize`
+- `engine-cli track artwork help`
+- `engine-cli track artwork help help`
+- `engine-cli track artwork help normalize`
+- `engine-cli help completion`
+- `engine-cli help completion bash`
+- `engine-cli help completion fish`
+- `engine-cli help completion powershell`
+- `engine-cli help completion zsh`
+- `engine-cli completion help`
+- `engine-cli completion help help`
+- `engine-cli completion help bash`
+- `engine-cli completion help fish`
+- `engine-cli completion help powershell`
+- `engine-cli completion help zsh`
