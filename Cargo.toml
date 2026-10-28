@@ -7,8 +7,8 @@ license = "MIT"
 description = "Inspect, repair and back up Engine DJ collections"
 
 [dependencies]
-audio-metadata = { path = "../fetch-track-cli/crates/audio-metadata" }
-cli-command-kit = { path = "../cli-command-kit" }
+audio-metadata = { git = "https://github.com/alexgorbatchev/fetch-track-cli-rust.git", rev = "ceef80acf7b50cf2b156a2b7658f780234169cfc" }
+cli-command-kit = { git = "https://github.com/alexgorbatchev/cli-command-kit-rust.git", rev = "40210e689762f6606776764bb3696e2685198c2e" }
 clap_complete = "4.6.11"
 engine-library = { path = "crates/engine-library" }
 dirs = "6"

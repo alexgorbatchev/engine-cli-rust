@@ -7,7 +7,7 @@ license = "MIT"
 description = "Engine DJ collection database, audio metadata, artwork and backup operations"
 
 [dependencies]
-audio-metadata = { path = "../../../fetch-track-cli/crates/audio-metadata" }
+audio-metadata = { git = "https://github.com/alexgorbatchev/fetch-track-cli-rust.git", rev = "ceef80acf7b50cf2b156a2b7658f780234169cfc" }
 base64 = "0.22"
 chrono = { version = "0.4", features = ["serde"] }
 dirs = "6"

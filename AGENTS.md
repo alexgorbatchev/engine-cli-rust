@@ -19,7 +19,7 @@ Native Rust command-line consumer of the internal Engine DJ collection package a
 ## Runtime and tests
 
 - Use Rust 1.89+ and installed cargo-llvm-cov/llvm-tools for the coverage gate. Native media fixtures require FFmpeg and FFprobe on PATH.
-- Native dependencies are internal `crates/engine-library`, `../fetch-track-cli/crates/audio-metadata`, and sibling `cli-command-kit`; integrate their actual APIs directly and keep domain implementations in the libraries.
+- Native dependencies are internal `crates/engine-library`, `audio-metadata` from revision-pinned `fetch-track-cli-rust`, and revision-pinned `cli-command-kit-rust`; integrate their actual APIs directly and keep domain implementations in the libraries.
 - Tests create isolated SQLite collections and real audio inside `.tmp`; subprocess tests set their own HOME and XDG_DATA_HOME rather than modifying process-global environment.
 - The binary version is 0.1.0. Rust artifacts are unpublished; existing Go release archives are not Rust binaries. The compiled canonical skill URL is a discovery pointer and does not establish a published Rust skill or release.
 

@@ -6,7 +6,7 @@ status: current
 
 # Engine collection services
 
-Read `../../AGENTS.md` and the applicable skills before changing this package. This unpublished internal workspace package belongs to `engine-cli`; its shared audio dependency is `../../../fetch-track-cli/crates/audio-metadata`. Run local recipes from this package directory.
+Read `../../AGENTS.md` and the applicable skills before changing this package. This internal workspace package belongs to `engine-cli`; its shared `audio-metadata` dependency resolves from a pinned GitHub revision of `fetch-track-cli-rust`. Run local recipes from this package directory.
 
 ## Commands
 
