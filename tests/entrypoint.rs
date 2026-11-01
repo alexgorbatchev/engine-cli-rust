@@ -121,7 +121,7 @@ fn entrypoint_separates_offline_validation_runtime_errors_and_raw_metadata() {
             .output()
             .unwrap();
         assert!(skill.status.success());
-        assert_eq!(skill.stdout, engine_cli::cli::SKILL_POINTER.as_bytes());
+        assert_eq!(skill.stdout, INSTALL_TEXT.as_bytes());
     }
     for args in [
         vec!["track", "move", "1"],
@@ -164,3 +164,5 @@ fn entrypoint_separates_offline_validation_runtime_errors_and_raw_metadata() {
     assert!(help.contains("├─") && help.contains("╰─"));
     assert!(!help.contains("ALERT:"));
 }
+
+const INSTALL_TEXT: &str = "Install the engine-cli skill using the Skills CLI:\n\n  npx skills add alexgorbatchev/engine-cli --skill engine-cli\n\nSkill:\n\n  https://github.com/alexgorbatchev/engine-cli/tree/main/skills/engine-cli\n";

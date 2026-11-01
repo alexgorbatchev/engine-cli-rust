@@ -52,7 +52,12 @@ pub async fn execute(
         stdout.write_all(concat!(env!("CARGO_PKG_VERSION"), "\n").as_bytes())?;
         return Ok(());
     }
-    if cli_command_kit::write_skill(matches, &cli::help_options(), &mut stdout)? {
+    if cli_command_kit::write_skill(
+        &cli::command(mode),
+        matches,
+        &cli::help_options(),
+        &mut stdout,
+    )? {
         return Ok(());
     }
     let mut path = Vec::new();

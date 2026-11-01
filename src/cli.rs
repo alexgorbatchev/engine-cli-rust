@@ -4,10 +4,12 @@ use cli_command_kit::{
 };
 use std::path::PathBuf;
 
-pub const SKILL_POINTER: &str = "Install the engine-cli skill using the Skills CLI:\n\n  npx skills add alexgorbatchev/engine-cli --skill engine-cli\n\nSkill:\n\n  https://github.com/alexgorbatchev/engine-cli/tree/main/skills/engine-cli\n";
 pub fn help_options() -> HelpOptions {
     HelpOptions {
-        skill: Some(SKILL_POINTER.into()),
+        skill: Some(
+            cli_command_kit::SkillSource::new("alexgorbatchev/engine-cli", "main")
+                .expect("the fixed skill source names a GitHub repository"),
+        ),
         tree: cli_command_kit::TreeOptions {
             terminal_width: Some(match cli_command_kit::terminal_width() {
                 0 => 80,
